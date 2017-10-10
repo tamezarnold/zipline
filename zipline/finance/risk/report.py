@@ -107,7 +107,8 @@ class RiskReport(object):
 
     def to_dict(self):
         """
-        RiskMetrics are calculated for rolling windows in four lengths::
+        RiskMetrics are calculated for rolling windows in five lengths::
+            - Daily
             - 1_month
             - 3_month
             - 6_month
@@ -117,8 +118,8 @@ class RiskReport(object):
         list of durations. The value of each entry is a list of RiskMetric
         dicts of the same duration as denoted by the top_level key.
 
-        See :py:meth:`RiskMetrics.to_dict` for the detailed list of fields
-        provided for each period.
+        See :py:meth:`RiskMetricsPeriod.to_dict` for the detailed list of
+        fields provided for each period.
         """
         return {
             'daily': self.daily_metrics(),
