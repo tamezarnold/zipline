@@ -45,7 +45,7 @@ def get_benchmark_returns(symbol, first_date, last_date):
     """
     data = pd_reader.DataReader(
         symbol,
-        'google',
+        'yahoo',
         first_date,
         last_date
     )
